@@ -5,13 +5,11 @@ Here we include the SPROUT full package along with the preprocessed Tcell files.
 
 # Quickstart Guide
 
-SPROUT_prediciton
-
-SPROUT pipeline conveniently works in three modes depending on what input format is available to the user. Here we detail each operating mode:
+To start using the light-weght prediction tool simply run SPROUT_prediciton.py and follow the instruction. The only software requirement is python 2.7.X. SPROUT pipeline conveniently works in three modes depending on what input format is available to the user. Here we detail each operating mode:
 
 Mode (1)
 
-The first mode takes the DNA sequence of the guide and the PAM sequence (23 base pairs) as the input. No other input is required for this operation model. This is ideal for nucleotide-only guide design purposes.  
+The first mode takes the DNA sequence of the guide and the PAM sequence (23 base pairs) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
 
 Which input format do you prefer? 
 (1) sgRNA sequence only
