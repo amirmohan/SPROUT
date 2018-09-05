@@ -598,16 +598,17 @@ sequence_pam_per_gene_grna_VO = pickle.load(open('storage_VO/spacer_pam_per_site
 sequence_pam_per_gene_grna_CHROMATIN_VO = np.concatenate((sequence_pam_per_gene_grna_VO, chrom_label_matrix_VO), axis=1)
 
 
+## all the models are trained and tested here
+
 
 ######################################### T cell #######################################################################
 
 
 ###fraction of indel mutant read with insertion
 
-
-#sequence_pam_per_gene_grna_new = sequence_pam_per_gene_grna[]
-#lin_reg = XGBRegressor(n_estimators=241, max_depth=3)
-#cross_validation_model(sequence_pam_per_gene_grna, fraction_insertions, fraction_insertions,lin_reg)
+sequence_pam_per_gene_grna_new = sequence_pam_per_gene_grna[]
+lin_reg = XGBRegressor(n_estimators=241, max_depth=3)
+cross_validation_model(sequence_pam_per_gene_grna, fraction_insertions, fraction_insertions,lin_reg)
 
 
 ###fraction of indel mutant read with insertion
@@ -792,41 +793,41 @@ sequence_pam_per_gene_grna_CHROMATIN_VO = np.concatenate((sequence_pam_per_gene_
 
 
 ## AT/CG single nucleotide Tcell
-insertion_matrix_max = np.zeros((2,1521))
-insertion_matrix_max[0,:] = np.max(insertion_matrix[[0,3],:],axis=0) #A and T
-insertion_matrix_max[1,:] = np.max(insertion_matrix[[1,2],:],axis=0) #C and G
-insertion_matrix_max = np.argmax(insertion_matrix_max,axis=0)
-
-insertion_matrix_max_VO = np.zeros((2,np.shape(insertion_matrix_VO)[1]))
-insertion_matrix_max_VO[0,:] = np.max(insertion_matrix_VO[[0,3],:],axis=0) #A and T
-insertion_matrix_max_VO[1,:] = np.max(insertion_matrix_VO[[1,2],:],axis=0) #C and G
-insertion_matrix_max_VO = np.argmax(insertion_matrix_max_VO,axis=0)
-
-print "naive guess"
-print max(list(insertion_matrix_max_VO).count(0),list(insertion_matrix_max_VO).count(1)) / float(np.size(insertion_matrix_max_VO))
-
-
-lin_reg = XGBClassifier(n_estimators=3, max_depth=1)
-lin_reg.fit(sequence_pam_per_gene_grna, insertion_matrix_max)
-
-insertions_score_HCT = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='HCT116'],insertion_matrix_max_VO[cell_type_VO=='HCT116'])
-insertions_score_HEK = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='HEK293'],insertion_matrix_max_VO[cell_type_VO=='HEK293'])
-insertions_score_K562 = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='K562'],insertion_matrix_max_VO[cell_type_VO=='K562'])
-insertions_score = [insertions_score_HCT,insertions_score_HEK,insertions_score_K562]
-
-lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='HCT116'])
-f1_HCT = f1_score(insertion_matrix_max_VO[cell_type_VO=='HCT116'], lin_reg_pred)
-
-lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='HEK293'])
-f1_HEK = f1_score(insertion_matrix_max_VO[cell_type_VO=='HEK293'], lin_reg_pred)
-
-lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='K562'])
-f1_K562 = f1_score(insertion_matrix_max_VO[cell_type_VO=='K562'], lin_reg_pred)
-
-print np.mean(insertions_score)
-print np.std(insertions_score)
-
-print np.mean([f1_HCT,f1_HEK,f1_K562])
+# insertion_matrix_max = np.zeros((2,1521))
+# insertion_matrix_max[0,:] = np.max(insertion_matrix[[0,3],:],axis=0) #A and T
+# insertion_matrix_max[1,:] = np.max(insertion_matrix[[1,2],:],axis=0) #C and G
+# insertion_matrix_max = np.argmax(insertion_matrix_max,axis=0)
+#
+# insertion_matrix_max_VO = np.zeros((2,np.shape(insertion_matrix_VO)[1]))
+# insertion_matrix_max_VO[0,:] = np.max(insertion_matrix_VO[[0,3],:],axis=0) #A and T
+# insertion_matrix_max_VO[1,:] = np.max(insertion_matrix_VO[[1,2],:],axis=0) #C and G
+# insertion_matrix_max_VO = np.argmax(insertion_matrix_max_VO,axis=0)
+#
+# print "naive guess"
+# print max(list(insertion_matrix_max_VO).count(0),list(insertion_matrix_max_VO).count(1)) / float(np.size(insertion_matrix_max_VO))
+#
+#
+# lin_reg = XGBClassifier(n_estimators=3, max_depth=1)
+# lin_reg.fit(sequence_pam_per_gene_grna, insertion_matrix_max)
+#
+# insertions_score_HCT = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='HCT116'],insertion_matrix_max_VO[cell_type_VO=='HCT116'])
+# insertions_score_HEK = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='HEK293'],insertion_matrix_max_VO[cell_type_VO=='HEK293'])
+# insertions_score_K562 = lin_reg.score(sequence_pam_per_gene_grna_VO[cell_type_VO=='K562'],insertion_matrix_max_VO[cell_type_VO=='K562'])
+# insertions_score = [insertions_score_HCT,insertions_score_HEK,insertions_score_K562]
+#
+# lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='HCT116'])
+# f1_HCT = f1_score(insertion_matrix_max_VO[cell_type_VO=='HCT116'], lin_reg_pred)
+#
+# lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='HEK293'])
+# f1_HEK = f1_score(insertion_matrix_max_VO[cell_type_VO=='HEK293'], lin_reg_pred)
+#
+# lin_reg_pred = lin_reg.predict(sequence_pam_per_gene_grna_VO[cell_type_VO=='K562'])
+# f1_K562 = f1_score(insertion_matrix_max_VO[cell_type_VO=='K562'], lin_reg_pred)
+#
+# print np.mean(insertions_score)
+# print np.std(insertions_score)
+#
+# print np.mean([f1_HCT,f1_HEK,f1_K562])
 
 
 
