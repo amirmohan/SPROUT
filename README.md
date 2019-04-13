@@ -1,9 +1,14 @@
 # SPROUT
 
-SPROUT is a machine learning algorithm to predict the repair outcome of a **CRISPR-CAS9 knockout experiment**. SPROUT accepts the DNA sequence of the *guide* as input as well as other *genomic factors*. It then predicts various statistics of the repair outcome, including: the fraction of mutant reads with an insertion/deletion, fraction of total reads with insertion/deletion, average insertion length given an insertion, average deletion length given a deletion, diversity, most likely inserted base pair and finally the edit (mutation) efficiency of the CRISPR outcome. Details of SPROUT is provided in the manuscript ["Systematic Characterization of Genome Editing in Primary T cells Reveals Proximal Genomic Insertions and Enables Machine Learning Prediction of CRISPR-Cas9 DNA Repair Outcomes"](<https://www.biorxiv.org/content/10.1101/404947v1.article-info>).
+SPROUT is a machine learning algorithm to predict the repair outcome of a **CRISPR-CAS9 knockout experiment**. SPROUT accepts the DNA sequence of the *guide* as input as well as other *genomic factors*. It then predicts various statistics of the repair outcome, including: the fraction of mutant reads with an insertion/deletion, fraction of total reads with insertion/deletion, average insertion length given an insertion, average deletion length given a deletion, diversity, most likely inserted base pair and finally the edit (mutation) efficiency of the CRISPR outcome. Details of SPROUT is provided in the manuscript ["Systematic Characterization of Genome Editing in Primary T cells Reveals Proximal Genomic Insertions and Enables Machine Learning Prediction of CRISPR-Cas9 DNA Repair Outcomes"](<https://www.biorxiv.org/content/10.1101/404947v1.article-info>). We have also provided an easy-to-use [SPROUT website](<https://stanford.edu/~amiralia/SPROUT/>) with graphical interfance for general users with limited access to computing resources.
 
 
-This repository includes the SPROUT package which includes the scripts required to predict the DNA repair outcome as well as a complete set of trained SPROUT models. The trained models are stored in the `model` folder. The last part of the SPROUT pipeline is a lightweight and self-containing code called SPROUT_predict which has a user-friendly platform. The code enable users with minimal coding knowledge to feed in a desired guide or a coordinate on the genome and get various repair outcomes as output.
+This repository includes the SPROUT package which includes the scripts required to predict the DNA repair outcome as well as a complete set of trained SPROUT models. The trained models are stored in the `model` folder. The main script of the package is `SPROUT_predict` which loads the pretrained models, asks for input query depending on the mode selected, and outputs the predicted statistics of the repair outcome. 
+
+
+
+
+The last part of the SPROUT pipeline is a lightweight and self-containing code called SPROUT_predict which has a user-friendly platform. The code enable users with minimal coding knowledge to feed in a desired guide or a coordinate on the genome and get various repair outcomes as output.
 
 # Quickstart Guide
 
