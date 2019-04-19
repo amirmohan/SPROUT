@@ -14,10 +14,12 @@ To use the light-weight prediction tool run the `SPROUT_prediction` script and f
 
 **Mode (1)** The first mode takes the DNA sequence of the guide and PAM sequence (23 base pair sequence) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
 
+```
 Which input format do you prefer? 
 (1) sgRNA sequence only
 (2) sgRNA sequence + genomic features (chromatin, etc.)
 (3) location on the genome and cell type 
+```
 
 Selected option:
 1
