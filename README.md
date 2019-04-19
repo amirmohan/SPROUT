@@ -51,13 +51,13 @@ Diversity                               2.25 (Low)
 Most likely inserted base pair          A
 ```
 
-**Mode (2)** The second mode accepts the guide sequence as well as the 33 genomic features listed in the main text as the  input. The format is a string with 33 features, separated by comma. The ordering of features are as follows: 
+**Mode (2)** The second mode accepts the input guide sequence as well as the 33 genomic features as listed in the main text. The input format is a string with 33 features, separated by comma. The ordering of features are as follows: 
 
 ```
 GC, CpG, priPhCons, mamPhCons, verPhCons, priPhyloP, mamPhyloP, verPhyloP, GerpN, GerpS, GerpRS, bStatistic, fitCons, cHmmTssA, cHmmTssAFlnk, cHmmTxFlnk, cHmmTx, cHmmTxWk, cHmmEnhG, cHmmEnh, cHmmZnfRpts, cHmmHet, cHmmTssBiv ,cHmmBivFlnk, cHmmEnhBiv, cHmmReprPC, cHmmReprPCWk, cHmmQuies, EncExp, EncH3K27Ac, EncH3K4Me1, EncH3K4Me3, EncNucleo.
 ```
 
-The details of the features are described in Supplementary Fig. 5 as adapted from the ENCODE project detailed ["http://cadd.gs.washington.edu/static/ReleaseNotes_CADD_v1.2.pdf"]. This mode of the operation of SRPOUT is ideal when both the guide sequence and the genomic factors are known, measured or a prior extracted.
+Details of the features are described in `Supplementary Fig. 5` as adapted from the **ENCODE project** detailed ["http://cadd.gs.washington.edu/static/ReleaseNotes_CADD_v1.2.pdf"]. This mode of the operation of SRPOUT is ideal when both the guide sequence and the genomic factors are known, measured or extracted a priori. As demonstrated in the manuscript the chromatin facots do not effect 
 
 ```
 Selected option:
@@ -67,9 +67,14 @@ Input the sgRNA sequence followed by the PAM sequence:
 TATGCATGCATATATATATAGGG
 ```
 
+```
 Input the genomic factors separated by ',':
 0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0
+```
+And the software output the predicted summary statistics.
 
+
+```
 Here are the repair outcomes that SPROUT predicts for this guide:
 
 Fraction of total reads with insertion 		22 %
@@ -85,12 +90,13 @@ Diversity 					2.92 (Low)
 Most likely inserted base pair 		T
 
 Edit efficiency 					55 %
+```
 
 
-Mode (3) The third mode of operation only asked for the coordinate of the cut site along with the cell type. The algorithm automatically extracts the guide from human ref genome (hg38.fa). The input coordinate should be the start of the guide position (from the 3’ side of the genome). Once the guide is extracted, the softwares does a few checks to make sure about the validity of the guide and PAM sequence. Then, the software extracts the genomic factors give the cell type from a server Finally, the SPROUT algorithm is evoked given the nucleotide and the genomic factors. 
+**Mode (3)** (Currently under construction) The third operation mode asks the coordinate of the cut site and the cell type as the input. The SPROUT software extracts the guide sequence as well as the PAM from the human refrence genome (hg38.fa). The input coordinate should be the index of the starting nucleotide of the guide sequence (from the 3’ end). Once the guide is extracted, the softwares does a few tests to validate the guide and PAM sequences. Then, the software extracts the genomic factors given the cell type from a server. Finally, the SPROUT software predicts the out given the input sequence and chromatin facotrs. 
 
 
-
+```
 Selected option:
 3
 
@@ -119,5 +125,6 @@ Average deletion length 			8.3 bps
 Diversity 					2.49 (Low)
 
 Most likely inserted base pair 		G
+```
 
 
