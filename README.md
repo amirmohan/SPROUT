@@ -87,7 +87,7 @@ Average deletion length 			11.5 bps
 
 Diversity 					2.92 (Low)
 
-Most likely inserted base pair 		      T
+Most likely inserted base pair 		        T
 
 Edit efficiency 				55 %
 ```
