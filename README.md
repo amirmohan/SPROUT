@@ -57,7 +57,7 @@ Most likely inserted base pair          A
 GC, CpG, priPhCons, mamPhCons, verPhCons, priPhyloP, mamPhyloP, verPhyloP, GerpN, GerpS, GerpRS, bStatistic, fitCons, cHmmTssA, cHmmTssAFlnk, cHmmTxFlnk, cHmmTx, cHmmTxWk, cHmmEnhG, cHmmEnh, cHmmZnfRpts, cHmmHet, cHmmTssBiv ,cHmmBivFlnk, cHmmEnhBiv, cHmmReprPC, cHmmReprPCWk, cHmmQuies, EncExp, EncH3K27Ac, EncH3K4Me1, EncH3K4Me3, EncNucleo.
 ```
 
-Details of the features are described in `Supplementary Fig. 5` as adapted from the **ENCODE project** detailed [here] (<http://cadd.gs.washington.edu/static/ReleaseNotes_CADD_v1.2.pdf>). This mode of the operation of SRPOUT is ideal when both the guide sequence and the genomic factors are known, measured or extracted a priori. As demonstrated in the manuscript the chromatin facots do not effect 
+Details of the features are described in `Supplementary Fig. 5` as adapted from the **ENCODE project** detailed ["here"](<http://cadd.gs.washington.edu/static/ReleaseNotes_CADD_v1.2.pdf>). This mode of the operation of SRPOUT is ideal when both the guide sequence and the genomic factors are known, measured or extracted a priori. As demonstrated in the manuscript the chromatin facots do not effect 
 
 ```
 Selected option:
