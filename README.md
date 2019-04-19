@@ -12,7 +12,7 @@ This repository provides the SPROUT package which includes the scripts required 
 
 To use the light-weight prediction tool run the `SPROUT_prediction` script and follow the instruction. The only software requirement is python 2.7.X. or later. SPROUT pipeline conveniently works in three modes depending on what input format is available to the user. Here we detail each operating mode:
 
-**Mode (1)** The first mode takes the DNA sequence of the guide and the PAM sequence (23 base pairs) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
+**Mode (1)** The first mode takes the DNA sequence of the guide and PAM sequence (23 base pair sequence) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
 
 Which input format do you prefer? 
 (1) sgRNA sequence only
