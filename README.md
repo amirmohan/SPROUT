@@ -33,8 +33,9 @@ Input the sgRNA sequence followed by the PAM sequence:
 TATGCATGCATCGACGATCGGGG
 ```
 
-The 
+The software output SPROUT's prediction results as detailed in the manuscript.
 
+```
 Here are the repair outcomes that SPROUT predicts for this guide:
 
 Fraction of total reads with insertion  19 % 
@@ -48,16 +49,18 @@ Average deletion length                 12.0 bps
 Diversity                               2.25 (Low)
 
 Most likely inserted base pair          A
+```
 
-
-Mode (2) The second mode accepts the guide sequence as well as the 33 genomic features listed in the main text as the  input. The format is a string with 33 features, separated by comma. The ordering of features are as follows: GC, CpG, priPhCons, mamPhCons, verPhCons, priPhyloP, mamPhyloP, verPhyloP, GerpN, GerpS, GerpRS, bStatistic, fitCons, cHmmTssA, cHmmTssAFlnk, cHmmTxFlnk, cHmmTx, cHmmTxWk, cHmmEnhG, cHmmEnh, cHmmZnfRpts, cHmmHet, cHmmTssBiv ,cHmmBivFlnk, cHmmEnhBiv, cHmmReprPC, cHmmReprPCWk, cHmmQuies, EncExp, EncH3K27Ac, EncH3K4Me1, EncH3K4Me3, EncNucleo.
+**Mode (2)** The second mode accepts the guide sequence as well as the 33 genomic features listed in the main text as the  input. The format is a string with 33 features, separated by comma. The ordering of features are as follows: GC, CpG, priPhCons, mamPhCons, verPhCons, priPhyloP, mamPhyloP, verPhyloP, GerpN, GerpS, GerpRS, bStatistic, fitCons, cHmmTssA, cHmmTssAFlnk, cHmmTxFlnk, cHmmTx, cHmmTxWk, cHmmEnhG, cHmmEnh, cHmmZnfRpts, cHmmHet, cHmmTssBiv ,cHmmBivFlnk, cHmmEnhBiv, cHmmReprPC, cHmmReprPCWk, cHmmQuies, EncExp, EncH3K27Ac, EncH3K4Me1, EncH3K4Me3, EncNucleo.
 The details of the features are described in Supplementary Fig. 5 as adapted from the ENCODE project detailed http://cadd.gs.washington.edu/static/ReleaseNotes_CADD_v1.2.pdf. This mode of the operation of SRPOUT is ideal when both the guide sequence and the genomic factors are known, measured or a prior extracted.
 
+```
 Selected option:
 2
 
 Input the sgRNA sequence followed by the PAM sequence:
 TATGCATGCATATATATATAGGG
+```
 
 Input the genomic factors separated by ',':
 0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0,0,0.5,0
