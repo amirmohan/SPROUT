@@ -5,14 +5,14 @@ SPROUT is a machine learning algorithm to predict the repair outcome of a **CRIS
 Details of SPROUT is provided in the manuscript ["Systematic Characterization of Genome Editing in Primary T cells Reveals Proximal Genomic Insertions and Enables Machine Learning Prediction of CRISPR-Cas9 DNA Repair Outcomes"](<https://www.biorxiv.org/content/10.1101/404947v1.article-info>). 
 
 
-This repository provides the SPROUT package which includes the scripts required to predict the DNA repair outcome as well as a complete set of trained SPROUT models. The trained models are stored in the `model` folder. The main script of the package is `SPROUT_predict` which loads the pretrained models, asks for input query depending on the mode selected, and outputs the predicted statistics of the repair outcome. 
+This repository provides the SPROUT package which includes the scripts required to predict the DNA repair outcome as well as a complete set of trained SPROUT models. The trained models are stored in the `model` folder of the repository. The main script of the package is the `SPROUT_predict` script which loads the pretrained models, asks for input query depending on the mode selected, and outputs the predicted statistics of the repair outcome. 
 
 
 # Quickstart Guide
 
-To start using the light-weight prediction tool simply run SPROUT_prediction.py and follow the instruction. The only software requirement is python 2.7.X. SPROUT pipeline conveniently works in three modes depending on what input format is available to the user. Here we detail each operating mode:
+To use the light-weight prediction tool run the `SPROUT_prediction` script and follow the instruction. The only software requirement is python 2.7.X. or later. SPROUT pipeline conveniently works in three modes depending on what input format is available to the user. Here we detail each operating mode:
 
-Mode (1) The first mode takes the DNA sequence of the guide and the PAM sequence (23 base pairs) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
+**Mode (1)** The first mode takes the DNA sequence of the guide and the PAM sequence (23 base pairs) as the input. No other input is required for this operational mode. This is ideal for nucleotide-only guide design purposes.  
 
 Which input format do you prefer? 
 (1) sgRNA sequence only
