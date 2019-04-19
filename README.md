@@ -124,7 +124,7 @@ Average deletion length 			8.3 bps
 
 Diversity 					2.49 (Low)
 
-Most likely inserted base pair 		      G
+Most likely inserted base pair 		        G
 ```
 
 
